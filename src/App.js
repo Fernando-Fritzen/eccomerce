@@ -3,11 +3,16 @@ import './App.css';
 import styled from 'styled-components';
 import Header from './components/Header';
 import Image from './img/jonathan-borba.png';
+import Shirt from './img/shirt-white.jpg';
+import Shirt2 from './img/shirt.jpg';
 
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { FaTshirt, FaRedhat, FaSocks } from "react-icons/fa";
 import { GiShirt, GiSonicShoes, GiShorts, GiArmoredPants, GiUnderwear } from "react-icons/gi";
 import { IconContext } from "react-icons";
+
+import Card from './components/Card';
+
 
 
 
@@ -113,6 +118,14 @@ const Container = styled.div`
     justify-content: space-around;
     margin-top: 30px;
   }
+
+  .cardContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
 `;
 
 const Categoria = styled.div`
@@ -133,6 +146,8 @@ const Categoria = styled.div`
     fill: red;
   }
 `;
+
+
 
 function App() {
   return (
@@ -222,6 +237,26 @@ function App() {
               </Categoria>
             </IconContext.Provider>
           </div>
+
+          <div className="cardContainer">
+            
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            {/* <Card ><img src={Shirt2}/></Card>
+            <Card ><img src={Shirt}/></Card>
+            <Card ><img src={Shirt2}/></Card> */}
+          </div>
+        
         </Container>
       </Section>
 
