@@ -11,7 +11,11 @@ import { FaTshirt, FaRedhat, FaSocks } from "react-icons/fa";
 import { GiShirt, GiSonicShoes, GiShorts, GiArmoredPants, GiUnderwear } from "react-icons/gi";
 import { IconContext } from "react-icons";
 
+import { Container } from './styles/style';
+
 import Card from './components/Card';
+import CardCollection from './components/CardCollection';
+
 
 
 
@@ -98,14 +102,9 @@ const ContainerRight = styled.div`
 
 const Section = styled.section`
   width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
-`;
 
-const Container = styled.div`
-  width: min(85%, 1250px);
-  background-color: rgba(0,0,0,.1);
 
   h2 {
     font-size: 40px;
@@ -126,7 +125,22 @@ const Container = styled.div`
     flex-wrap: wrap;
     margin-top: 30px;
   }
+
+  .listAll {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 0;
+
+    button {
+      padding: 15px 20px;
+      background-color: transparent;
+      border: 1px solid #000;
+    }
+  }
 `;
+
 
 const Categoria = styled.div`
   width: 85px;
@@ -145,6 +159,15 @@ const Categoria = styled.div`
     color: #FFF;
     fill: red;
   }
+`;
+
+const Section2 = styled.section`
+
+  width: 100vw;
+  height: 100vh;
+  padding-left: 7.5%;
+  padding-top: 40px;
+  margin-top: 30px;
 `;
 
 
@@ -257,8 +280,19 @@ function App() {
             <Card ><img src={Shirt2}/></Card> */}
           </div>
         
+          <div className="listAll">
+            <button>Todos os produtos</button>
+          </div>
+          
         </Container>
+
       </Section>
+            
+      <Section2 >
+        <h2>Popular essa semana</h2>
+
+        <CardCollection />
+      </Section2>
 
     </div>
   );
