@@ -89,27 +89,28 @@ const CardContainer = styled.div`
     opacity: 1;
 
   }
+
 `;
 
 
 function Card() {
   return (
 
-    <CardContainer >
+    <CardContainer>
         <img src={Shirt}/>
         <div className="info">
-        <div className="title">
-            <h4>Camiseta branca</h4>
-            <span>⭐ 4.7</span>
-        </div>
-        <div className="end">
-            <span>R$ 117,99</span>
-            <div className="action">
-            <button>Comprar</button>
-            <AiOutlineHeart style={{marginLeft:'10px'}}/>
-            <AiOutlineShoppingCart style={{marginLeft:'10px'}}/>
-            </div>
-        </div>
+          <div className="title">
+              <h4>Camiseta branca</h4>
+              <span>⭐ 4.7</span>
+          </div>
+          <div className="end">
+              <span>R$ 117,99</span>
+              <div className="action">
+                <button>Comprar</button>
+                <AiOutlineHeart style={{marginLeft:'10px'}}/>
+                <AiOutlineShoppingCart style={{marginLeft:'10px'}}/>
+              </div>
+          </div>
         </div>
     </CardContainer>
 

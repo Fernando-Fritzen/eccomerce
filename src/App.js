@@ -14,6 +14,7 @@ import { IconContext } from "react-icons";
 import { Container } from './styles/style';
 
 import Card from './components/Card';
+import CardPopular from './components/CardPopular';
 import CardCollection from './components/CardCollection';
 
 
@@ -21,16 +22,27 @@ import CardCollection from './components/CardCollection';
 
 
 const Main = styled.main`
-  width: 100%;
+  width: min(85vw, 1250px);
+  margin: 0 auto;
   height: calc(100vh - 90px);
   display: flex;
   align-items: center;
-  padding: 0 30px;
+  /* padding: 0 30px; */
+`;
+
+const Aside = styled.aside`
+  width: 7%;
+  height: calc(100% - 90px);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  background-color: red;
 `;
 
 const ContainerLeft = styled.div`
   width: 55%;
-  padding-left: 15%;
+  /* padding-left: 15%; */
   
 
   h1 {
@@ -97,7 +109,7 @@ const Color = styled.div`
 const ContainerRight = styled.div`
   width: 45%;
   text-align: right;
-  padding-right: 10%;
+  /* padding-right: 10%; */
 `;
 
 const Section = styled.section`
@@ -155,7 +167,8 @@ const Categoria = styled.div`
   }
 
   &:hover {
-    background: #62666D;
+    /* background: #62666D; */
+    background: #3d3f43;
     color: #FFF;
     fill: red;
   }
@@ -164,7 +177,6 @@ const Categoria = styled.div`
 const Section2 = styled.section`
 
   width: 100vw;
-  height: 100vh;
   padding-left: 7.5%;
   padding-top: 40px;
   margin-top: 30px;
@@ -178,6 +190,7 @@ function App() {
       <Header />
 
       <Main>
+        <Aside />
         <ContainerLeft>
           <div className="title">
             <h1>Verão</h1>
@@ -291,8 +304,13 @@ function App() {
       <Section2 >
         <h2>Popular essa semana</h2>
 
-        <CardCollection />
+        <CardPopular />
       </Section2>
+
+      <Container style={{display:'flex', margin: '0 auto', justifyContent:'space-between'}}>
+            <CardCollection />
+            <CardCollection />
+      </Container>
 
     </div>
   );
